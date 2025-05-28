@@ -1,0 +1,122 @@
+@import url('https://fonts.googleapis.com/css2?family=Krona+One&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+*{
+    margin:0;
+    padding: 0;
+}
+
+body{
+    background-color: black;
+    color: white;
+    margin: 0;
+    height: 100vh;
+    animation: flash 1.5s ease-out;
+    opacity: 0;
+    animation: aparecer 2s ease-in forwards;
+}
+
+@keyframes piscar {
+    0%, 100% { background-color: black; }
+    50% { background-color: #ffeb3b; } /* amarelinho brilhante */
+}
+
+@keyframes aparecer {
+    to { opacity: 1; }
+}
+
+.titulo-destaque{
+    background: linear-gradient(90deg, #cb3131, #b12626, #770404);
+    background-size: 200% auto;
+    color: white;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: brilhoTexto 3s linear infinite;
+}
+
+@keyframes brilhoTexto {
+    0% { background-position: 0% 50%; }
+    100% { background-position: 200% 50%; }
+}
+
+.apresentacao{
+    padding: 8% 15%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.apresentacao__conteudo{
+    width: 615px;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+.apresentacao__conteudo__titulo{
+    font-size: 36px;
+    font-family: "Krona One", sans-serif;
+}
+
+.apresentacao__conteudo__texto{
+    font-size: 24px;
+    font-family: "Montserrat", sans-serif;
+}
+
+.apresentacao__links__subtitulo{
+    font-family: "Krona One", sans-serif;
+    font-weight: 400;
+    font-size: 24px;
+}
+
+.apresentacao__links{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    gap: 32px;
+}
+
+.apresentacao__links__link{
+    display: flex;
+    justify-content: center;
+    gap: 16px;
+    border: 2px solid #22D4FD;
+    color: #F6F6F6;
+    width: 378px;
+    text-align: center;
+    border-radius: 8px;
+    font-size: 24px;
+    font-weight: 600;
+    padding: 21.5px 0;
+    text-decoration: none;
+    font-family: "Montserrat", sans-serif;
+}
+
+.apresentacao__links__link:hover{
+    background-color: #272727;
+}
+
+.spotify {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: red;
+    color: white;
+    text-decoration: none;
+    border-radius: 10px;
+    font-weight: bold;
+    transition: background 0.3s;
+  }
+  
+.spotify:hover {
+    background-color: rgb(210, 92, 92);
+  }
+  
+
+.rodape{
+    color: black;
+    background-color: red;
+    padding: 24px;
+    text-align: center;
+    font-family: "Montserrat", sans-serif;
+    font-size: 24px;
+}
